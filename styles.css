@@ -55,13 +55,13 @@ nav {
 
 .submenu {
     display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
+    position: absolute; /* Mantenha como absolute */
+    top: 0; /* Alinhado ao topo do item pai */
+    left: 100%; /* Coloca o submenu à direita do item pai */
     list-style: none;
     background-color: #4682b4; /* Fundo azul para submenu */
     padding: 10px 0;
-    width: 150px;
+    width: 150px; /* Largura do submenu */
     border: 1px solid #f0f0f0; /* Borda clara */
     z-index: 999;
 }
@@ -147,10 +147,9 @@ footer {
     /* Menu fixo no canto esquerdo */
     .menu {
         display: none; /* Esconde o menu principal */
-        position: fixed; /* Fixa o menu */
+        position: absolute; /* Muda de fixed para absolute */
         left: 0;
-        top: 50%; /* Alinha ao centro verticalmente */
-        transform: translateY(-50%); /* Centraliza verticalmente */
+        top: 60px; /* Alinha logo abaixo do cabeçalho */
         flex-direction: column; /* Coluna para itens de menu */
         background-color: #4682b4; /* Fundo azul */
         padding: 20px; /* Espaçamento interno */
@@ -169,8 +168,10 @@ footer {
     }
 
     .submenu {
-        position: relative; /* Submenu ajusta ao menu vertical */
-        width: 100%; /* Submenu ocupa toda a largura */
+        position: absolute; /* Alterado para absolute */
+        top: 0; /* Mantém alinhado ao topo do item pai */
+        left: 100%; /* Posiciona à direita do item pai */
+        width: 150px; /* Largura do submenu */
     }
 }
 
