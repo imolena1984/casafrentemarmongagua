@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Fotos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mongagua.html">Mongaguá</a></li>
+                <li>
+                    <a href="#">Galeria</a>
+                    <ul class="submenu">
+                        <li><a href="fotos.html">Fotos</a></li>
+                        <li><a href="videos.html">Vídeos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Alugue</a>
+                    <ul class="submenu">
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="calculadora.html">Preços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Como Chegar</a>
+                    <ul class="submenu">
+                        <li><a href="googlemaps.html">Google Maps</a></li>
+                        <li><a href="waze.html">Waze</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="comente.php">Comente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="gallery">
+        <h1>Galeria de Fotos</h1>
+        <img src="img/foto1.jpg" alt="Foto 1" class="gallery-item">
+        <img src="img/foto2.jpg" alt="Foto 2" class="gallery-item">
+        <img src="img/foto3.jpg" alt="Foto 3" class="gallery-item">
+        <!-- Adicione mais imagens conforme necessário -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

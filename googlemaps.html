@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Maps</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mongagua.html">Mongaguá</a></li>
+                <li>
+                    <a href="#">Galeria</a>
+                    <ul class="submenu">
+                        <li><a href="fotos.html">Fotos</a></li>
+                        <li><a href="videos.html">Vídeos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Alugue</a>
+                    <ul class="submenu">
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="calculadora.html">Preços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Como Chegar</a>
+                    <ul class="submenu">
+                        <li><a href="googlemaps.html">Maps</a></li>
+                        <li><a href="waze.html">Waze</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="comente.php">Comente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="maps-section">
+        <h1>Google Maps</h1>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9030381231555!2d-46.733423285023004!3d-23.90195088467107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce3b36e50791a3%3A0x3e9f732e9a1d0c0!2sMongagu%C3%A1%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1650834394461!5m2!1spt-BR!2sbr" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

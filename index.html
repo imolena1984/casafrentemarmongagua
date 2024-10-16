@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <button class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
+            <ul class="menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="mongagua.html">Mongaguá</a></li>
+                <li>
+                    <a href="#">Galeria</a>
+                    <ul class="submenu">
+                        <li><a href="fotos.html">Fotos</a></li>
+                        <li><a href="videos.html">Vídeos</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Alugue</a>
+                    <ul class="submenu">
+                        <li><a href="agenda.html">Agenda</a></li>
+                        <li><a href="calculadora.html">Preços</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Como Chegar</a>
+                    <ul class="submenu">
+                        <li><a href="googlemaps.html">Maps</a></li>
+                        <li><a href="waze.html">Waze</a></li>
+                    </ul>
+                </li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="comente.php">Comente</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="slideshow">
+        <img class="active" src="img/slide1.jpg" alt="Imagem 1">
+        <img src="img/slide2.jpg" alt="Imagem 2">
+        <img src="img/slide3.jpg" alt="Imagem 3">
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+    </section>
+
+    <section class="text-section">
+        <h1>Bem-vindo a Mongaguá</h1>
+        <p>Mongaguá é um dos melhores destinos turísticos do litoral paulista, com praias lindas e natureza exuberante.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

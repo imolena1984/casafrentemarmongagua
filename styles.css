@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff; /* Cor de fundo branca */
+    color: #333; /* Texto em cinza escuro */
+    display: flex;
+    flex-direction: column; /* Permite que o rodapé fique fixo no final */
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4682B4; /* Cor de fundo branca */
+    border-bottom: 1px solid #ccc; /* Borda inferior leve */
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Espaçamento melhorado */
+}
+
+.menu {
+    list-style: none;
+    display: flex; /* Menu em linha */
+}
+
+.menu li {
+    position: relative; /* Para submenu */
+    margin: 0 15px; /* Espaçamento entre itens do menu */
+}
+
+.menu a {
+    text-decoration: none; /* Sem sublinhado */
+    color: #fff; /* Azul */
+    padding: 10px 15px; /* Espaçamento interno */
+    transition: background 0.3s, color 0.3s; /* Transição suave para hover */
+}
+
+.menu a:hover {
+    background-color: #fff; /* Cor de fundo ao passar o mouse em verde água claro */
+    color: #4682B4; /* Mantém o texto em azul */
+}
+
+.submenu {
+    display: none; /* Inicialmente oculto */
+    position: absolute; /* Posição absoluta em relação ao item pai */
+    top: 100%; /* Colocado abaixo do item do menu */
+    left: 0; /* Alinhado à esquerda */
+    list-style: none;
+    background: #4682b4; /* Cor de fundo branca para submenu */
+    border: 1px solid #ccc; /* Borda leve */
+    z-index: 999;
+}
+
+.menu li:hover .submenu {
+    display: block; /* Mostrar submenu ao passar o mouse */
+}
+
+.hamburger {
+    display: none; /* Inicialmente escondido */
+    flex-direction: column;
+    cursor: pointer; /* Mão indicando clique */
+}
+
+.hamburger div {
+    width: 30px; /* Largura das linhas do menu sanduíche */
+    height: 3px; /* Altura das linhas */
+    background-color: #4682B4; /* Azul */
+    margin: 5px 0; /* Espaçamento entre linhas */
+}
+
+/* Slideshow */
+.slideshow {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.slideshow img {
+    width: 100%; /* Imagem ocupa toda a largura */
+    display: none; /* Oculto por padrão */
+}
+
+.slideshow img.active {
+    display: block; /* Mostrar imagem ativa */
+}
+
+/* Estilização para as seções */
+.text-section, .maps-section, .contact-section {
+    padding: 80px 20px; /* Espaçamento nas seções */
+    text-align: center; /* Centralizar texto */
+    flex-grow: 1; /* Permite que as seções ocupem espaço restante */
+}
+
+.video-gallery {
+    padding: 80px 20px; /* Espaçamento da galeria de vídeo */
+    text-align: center; /* Centralizar texto */
+}
+
+.video-item {
+    max-width: 100%; /* Limitar a largura dos itens de vídeo */
+    margin: 10px 0; /* Margem vertical */
+}
+
+/* Rodapé */
+footer {
+    text-align: center; /* Centralizar texto do rodapé */
+    padding: 20px; /* Espaçamento do rodapé */
+    background-color: #7FFFD4; /* Cor de fundo verde água claro */
+    color: #333; /* Texto em cinza escuro */
+    border-top: 1px solid #ccc; /* Borda superior leve */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Menu em coluna em telas menores */
+        display: none; /* Ocultar menu por padrão */
+        background-color: #4682b4; /* Cor de fundo branca para o menu em tela menor */
+    }
+
+    .menu.active {
+        display: flex; /* Mostrar menu ao ativar */
+    }
+
+    .hamburger {
+        display: flex; /* Mostrar botão do menu sanduíche em telas menores */
+    }
+
+    .submenu {
+        position: relative; /* Mudar posição do submenu */
+    }
+}
