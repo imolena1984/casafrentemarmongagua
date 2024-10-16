@@ -6,8 +6,7 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #ffffff; /* Cor de fundo branca */
-    color: #333; /* Texto em cinza escuro */
+    background-color: #f4f4f4;
     display: flex;
     flex-direction: column; /* Permite que o rodapé fique fixo no final */
     min-height: 100vh; /* Garante que o corpo ocupe a altura total da tela */
@@ -18,8 +17,8 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #4682B4; /* Cor de fundo branca */
-    border-bottom: 1px solid #ccc; /* Borda inferior leve */
+    background-color: #FF8C00; /* Cabeçalho laranja escuro */
+    border-bottom: 1px solid #FFA07A; /* Laranja claro para a borda */
     z-index: 1000;
 }
 
@@ -27,60 +26,60 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px; /* Espaçamento melhorado */
+    padding: 10px;
 }
 
 .menu {
     list-style: none;
-    display: flex; /* Menu em linha */
+    display: flex;
 }
 
 .menu li {
-    position: relative; /* Para submenu */
-    margin: 0 15px; /* Espaçamento entre itens do menu */
+    position: relative;
+    margin: 0 15px;
 }
 
 .menu a {
-    text-decoration: none; /* Sem sublinhado */
-    color: #fff; /* Azul */
-    padding: 10px 15px; /* Espaçamento interno */
-    transition: background 0.3s, color 0.3s; /* Transição suave para hover */
+    text-decoration: none;
+    color: #fff; /* Texto branco no menu */
+    padding: 10px 15px;
+    transition: background 0.3s;
 }
 
 .menu a:hover {
-    background-color: #fff; /* Cor de fundo ao passar o mouse em verde água claro */
-    color: #4682B4; /* Mantém o texto em azul */
+    background-color: #FFA07A; /* Cor laranja claro no hover */
 }
 
 .submenu {
-    display: none; /* Inicialmente oculto */
-    position: absolute; /* Posição absoluta em relação ao item pai */
-    top: 100%; /* Colocado abaixo do item do menu */
-    left: 0; /* Alinhado à esquerda */
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     list-style: none;
-    background: #4682b4; /* Cor de fundo branca para submenu */
-    border: 1px solid #ccc; /* Borda leve */
+    background: #FF8C00; /* Fundo laranja escuro no submenu */
+    border: 1px solid #FFA07A; /* Borda laranja clara */
     z-index: 999;
 }
 
 .menu li:hover .submenu {
-    display: block; /* Mostrar submenu ao passar o mouse */
+    display: block; /* Mostra o submenu ao passar o mouse */
 }
 
+/* Menu Sanduíche */
 .hamburger {
-    display: none; /* Inicialmente escondido */
+    display: none; /* Inicialmente escondido em telas grandes */
     flex-direction: column;
-    cursor: pointer; /* Mão indicando clique */
+    cursor: pointer;
 }
 
 .hamburger div {
-    width: 30px; /* Largura das linhas do menu sanduíche */
-    height: 3px; /* Altura das linhas */
-    background-color: #4682B4; /* Azul */
-    margin: 5px 0; /* Espaçamento entre linhas */
+    width: 30px; /* Largura das linhas do menu */
+    height: 3px; /* Altura das linhas do menu */
+    background-color: #fff; /* Cor das linhas do menu sanduíche */
+    margin: 4px 0; /* Espaçamento entre as linhas */
 }
 
-/* Slideshow */
+/* Estilização do Slideshow */
 .slideshow {
     position: relative;
     max-width: 100%;
@@ -88,57 +87,65 @@ nav {
 }
 
 .slideshow img {
-    width: 100%; /* Imagem ocupa toda a largura */
-    display: none; /* Oculto por padrão */
+    width: 100%;
+    display: none; /* Inicialmente escondido */
 }
 
 .slideshow img.active {
-    display: block; /* Mostrar imagem ativa */
+    display: block; /* Mostra a imagem ativa */
 }
 
 /* Estilização para as seções */
-.text-section, .maps-section, .contact-section {
-    padding: 80px 20px; /* Espaçamento nas seções */
-    text-align: center; /* Centralizar texto */
-    flex-grow: 1; /* Permite que as seções ocupem espaço restante */
-}
-
+.text-section,
+.maps-section,
+.contact-section,
 .video-gallery {
-    padding: 80px 20px; /* Espaçamento da galeria de vídeo */
-    text-align: center; /* Centralizar texto */
+    padding: 80px 20px;
+    text-align: center;
+    flex-grow: 1; /* Permite que as seções ocupem o espaço restante */
 }
 
 .video-item {
-    max-width: 100%; /* Limitar a largura dos itens de vídeo */
-    margin: 10px 0; /* Margem vertical */
+    max-width: 100%;
+    margin: 10px 0;
 }
 
 /* Rodapé */
 footer {
-    text-align: center; /* Centralizar texto do rodapé */
-    padding: 20px; /* Espaçamento do rodapé */
-    background-color: #7FFFD4; /* Cor de fundo verde água claro */
-    color: #333; /* Texto em cinza escuro */
-    border-top: 1px solid #ccc; /* Borda superior leve */
+    text-align: center;
+    padding: 20px;
+    background-color: #FF8C00; /* Fundo laranja escuro no rodapé */
+    color: #fff; /* Texto branco no rodapé */
+    border-top: 1px solid #FFA07A; /* Borda laranja clara */
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
     .menu {
-        flex-direction: column; /* Menu em coluna em telas menores */
-        display: none; /* Ocultar menu por padrão */
-        background-color: #4682b4; /* Cor de fundo branca para o menu em tela menor */
+        flex-direction: column; /* Muda menu para coluna em telas menores */
+        position: absolute;
+        left: 0;
+        top: 60px; /* Abaixo do cabeçalho */
+        width: 100%;
+        background-color: #FF8C00; /* Cor de fundo laranja escuro */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra para o menu */
+        display: none; /* Esconde o menu por padrão */
     }
 
     .menu.active {
-        display: flex; /* Mostrar menu ao ativar */
+        display: flex; /* Mostra menu ao ativar */
+    }
+
+    .menu li {
+        margin: 10px 0; /* Margem vertical para itens do menu */
     }
 
     .hamburger {
-        display: flex; /* Mostrar botão do menu sanduíche em telas menores */
+        display: flex; /* Mostra o botão do menu sanduíche em telas menores */
     }
 
     .submenu {
-        position: relative; /* Mudar posição do submenu */
+        position: relative; /* Muda posição do submenu */
+        background: #FF8C00; /* Cor de fundo laranja escuro do submenu */
     }
 }
